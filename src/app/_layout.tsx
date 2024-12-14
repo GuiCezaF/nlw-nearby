@@ -10,6 +10,7 @@ import {
 
 import { Loading } from "@/components/loading";
 import { SafeAreaView, StatusBar, View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler"
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -26,14 +27,14 @@ export default function Layout() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.gray[100] }}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.gray[100]} />
-      <Stack
-        screenOptions={{
-          headerShown: false,
-          contentStyle: {
-            backgroundColor: colors.gray[100],
-          },
-        }}
-      />
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            contentStyle: { backgroundColor: colors.gray[100] },
+          }}
+        />
+    </GestureHandlerRootView>
     </SafeAreaView>
   );
 }
