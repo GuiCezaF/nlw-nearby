@@ -13,8 +13,8 @@ export const s = StyleSheet.create({
     gap: 14,
   },
   title: {
-    color : colors.gray[100],
+    color: colors.gray[100],
     fontFamily: fontFamily.semiBold,
     fontSize: 16,
   },
-})
+});

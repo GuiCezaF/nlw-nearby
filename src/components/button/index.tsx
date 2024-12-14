@@ -9,11 +9,11 @@ import {
 } from "react-native";
 import { IconProps as TablerIconProps } from "@tabler/icons-react-native";
 
-type ButtonProp = TouchableOpacityProps & {
+type ButtonProps = TouchableOpacityProps & {
   isLoading?: boolean;
 };
 
-function Button({ children, style, isLoading = false, ...rest }: ButtonProp) {
+function Button({ children, style, isLoading = false, ...rest }: ButtonProps) {
   return (
     <TouchableOpacity
       style={[s.container, style]}
@@ -43,5 +43,6 @@ function Icon({ icon: Icon }: IconProps) {
 }
 
 Button.Title = Title;
+Button.Icon = Icon;
 
 export { Button };
